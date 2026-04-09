@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  nexus-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+    environment:
+      - RUST_LOG=info
+      - NETWORK=testnet
+    volumes:
+      - nexus-data:/data
+    restart: unless-stopped
+
+  ipfs:
+    image: ipfs/kubo:latest
+    ports:
+      - "5001:5001"
+      - "8080:8080"
+    volumes:
+      - ipfs-data:/data/ipfs
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nexus-node
+
+  oracle-node:
+    build:
+      context: .
+      dockerfile: Dockerfile.oracle
+    environment:
+      - ORACLE_FEEDS=price,sentiment,weather
+      - RUST_LOG=info
+    depends_on:
+      - nexus-node
+
+volumes:
+  nexus-data:
+  ipfs-data:
