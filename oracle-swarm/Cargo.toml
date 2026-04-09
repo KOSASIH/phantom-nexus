@@ -1,0 +1,16 @@
+[package]
+name = "oracle-swarm"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Global Oracle Swarm - 1M+ data feeds with 99.99% accuracy"
+
+[dependencies]
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rand.workspace = true
+log.workspace = true
+thiserror.workspace = true
+async-trait.workspace = true

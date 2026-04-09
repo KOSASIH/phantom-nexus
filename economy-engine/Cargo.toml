@@ -1,0 +1,17 @@
+[package]
+name = "economy-engine"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Invisible Economy Engine - Predictive tokenomics, cross-chain bridge, and DeFi vaults"
+
+[dependencies]
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rand.workspace = true
+log.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+async-trait.workspace = true
