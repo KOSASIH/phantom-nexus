@@ -1,0 +1,19 @@
+[package]
+name = "phantom-ai"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Phantom AI Core - Self-evolving neural networks and swarm intelligence"
+
+[dependencies]
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rand.workspace = true
+log.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+async-trait.workspace = true
+ndarray = "0.15"
+ordered-float = "4.2"
