@@ -1,0 +1,20 @@
+[package]
+name = "phantom-agents"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Phantom Agents — 1000+ Autonomous AGI Agents with multi-skill orchestration for 24/7 Phantom Nexus operations"
+
+[dependencies]
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rand.workspace = true
+log.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+async-trait.workspace = true
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.7", features = ["v4", "serde"] }
+dashmap = "5.5"
