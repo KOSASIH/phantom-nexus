@@ -1,0 +1,14 @@
+{
+  "name": "phantom-nexus",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=phantom-nexus-frontend",
+    "build": "npm run build --workspace=phantom-nexus-frontend",
+    "preview": "npm run preview --workspace=phantom-nexus-frontend",
+    "lint": "npm run lint --workspace=phantom-nexus-frontend"
+  }
+}
